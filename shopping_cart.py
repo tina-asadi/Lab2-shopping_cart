@@ -41,6 +41,7 @@ for i in range(num_of_items):
         quantity_of_item.append(quantity)
         #Calculating the total price
         total_price+=price*quantity
+
     except:
         print("Invalid Input! Please Enter a valid input for each part")
     #printing the total value of each item if successful
@@ -49,6 +50,50 @@ for i in range(num_of_items):
 
 #step 4: printing the total price
 print(f"The total price will be {total_price} dollars! ")
+
+#step 5: Adding restart feature
+restart = input("\nWould you like to shop again? (yes/no): ").lower()
+if restart == "yes":
+# Code to restart
+    # Clearing previous data
+    name_of_item.clear()
+    price_of_item.clear()
+    quantity_of_item.clear()
+    total_price = 0 
+    try:
+        num_of_items=int(input("Please Enter the number Of items you want to buy: "))
+    except:
+        print("Invalid input Please enter an integer number!")
+    else:
+        print("Thank you! Number of items were successfully added.")
+    for i in range(num_of_items):
+    #Using Exception handeling
+        try:
+            #Asking the uset to enter the name
+            name=input(f"Please enter the name of item {i+1}: ")
+            #Adding name to the list
+            name_of_item.append(name)
+            #Asking the uset to enter the price
+            price=float(input(f"Please enter the price of {name}: "))
+            #Adding price to the list
+            price_of_item.append(price)
+            #Asking the uset to enter the quantity
+            quantity=int(input(f"Please enter the quantity of {name}: "))
+            #Adding quantity to the list
+            quantity_of_item.append(quantity)
+            #Calculating the total price
+            total_price+=price*quantity
+        except:
+            print("Invalid Input! Please Enter a valid input for each part")
+        #printing the total value of each item if successful
+        else:
+            print(f"{quantity} {name} Added to your cart at {total_price}")
+
+else:
+ print("Thank you for shopping with us!")
+
+
+
 
     
 
