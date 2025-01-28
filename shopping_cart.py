@@ -48,6 +48,12 @@ for i in range(num_of_items):
     else:
         print(f"{quantity} {name} Added to your cart at {total_price}")
 
+#Adding discount
+if total_price > 100:
+ discount = total_price * 0.1
+ total_price -= discount
+ print(f"\nYou saved ${discount:.2f} with a 10% discount!")
+ print(f"Discounted Total: ${total_price:.2f}")
 #step 4: printing the total price
 print(f"The total price will be {total_price} dollars! ")
 
@@ -88,6 +94,15 @@ if restart == "yes":
         #printing the total value of each item if successful
         else:
             print(f"{quantity} {name} Added to your cart at {total_price}")
+
+    #Adding discount
+    if total_price > 100:
+        discount = total_price * 0.1
+        total_price -= discount
+        print(f"\nYou saved ${discount:.2f} with a 10% discount!")
+        print(f"Discounted Total: ${total_price:.2f}")
+    #printing the total price
+    print(f"The total price will be {total_price} dollars! ")
 
 else:
  print("Thank you for shopping with us!")
