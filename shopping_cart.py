@@ -43,6 +43,12 @@ for i in range(num_of_items):
         total_price+=price*quantity
     except:
         print("Invalid Input! Please Enter a valid input for each part")
+    #printing the total value of each item if successful
+    else:
+        print(f"{quantity}{name} Added to your cart at {total_price}")
+
+#step 4: printing the total price
+print("The total price will be {total_price} dollars! ")
 
     
 
