@@ -15,3 +15,10 @@ except:
 else:
     print("Thank you! Number of items were successfully added.")
 
+# step 2: Creating Lists to add items, prices and quantities
+name_of_item=[]
+price_of_item=[]
+quantity_of_item=[]
+
+# Creating variable to keep the total value
+total_price=0
