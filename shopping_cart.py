@@ -22,3 +22,30 @@ quantity_of_item=[]
 
 # Creating variable to keep the total value
 total_price=0
+
+# step 3: Creating a loop to ask the user for the name, price, and quantity of each item.
+for i in range(num_of_items):
+    #Using Exception handeling
+    try:
+        #Asking the uset to enter the name
+        name=input(f"Please enter the name of item {i+1}: ")
+        #Adding name to the list
+        name_of_item.append(name)
+        #Asking the uset to enter the price
+        price=float(input(f"Please enter the price of {name}: "))
+         #Adding price to the list
+        price_of_item.append(price)
+        #Asking the uset to enter the quantity
+        quantity=int(input(f"Please enter the quantity of {name}: "))
+        #Adding quantity to the list
+        quantity_of_item.append(quantity)
+        #Calculating the total price
+        total_price+=price*quantity
+    except:
+        print("Invalid Input! Please Enter a valid input for each part")
+
+    
+
+
+
+
